@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddContact from '../components/AddContact/AddContact';
 import ContactList from '../components/ContsctList/ContactList';
 import EditContact from '../components/EditContact/EditContact';

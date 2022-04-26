@@ -5,12 +5,11 @@ import { contactsContext } from '../../contexts/ContactsContext';
 const AddContact = () => {
   const { addContact } = useContext(contactsContext);
 
-  const [person, setPerson] = useState({ name: '', number: '' });
+  const [person, setPerson] = useState({ name: '', number: '', status: false });
 
   const handleInp = (e) => {
     let obj = {
       ...person,
-
       [e.target.name]: e.target.value,
     };
     setPerson(obj);
@@ -34,7 +33,7 @@ const AddContact = () => {
       <Button
         onClick={() => {
           addContact(person);
-          setPerson({ name: '', number: '' });
+          setPerson({ name: '', number: '', status: false });
         }}
       >
         ADD
