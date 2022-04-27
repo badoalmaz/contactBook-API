@@ -1,21 +1,9 @@
 {
   "contacts": [
     {
-      "name": "12",
-      "number": "21",
-      "status": true,
-      "id": 1
-    },
-    {
-      "name": "12",
-      "number": "212",
-      "status": true,
-      "id": 2
-    },
-    {
       "name": "23",
       "number": "2323",
-      "status": true,
+      "status": false,
       "id": 3
     },
     {

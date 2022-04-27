@@ -55,7 +55,6 @@ const ContactsContextProvider = ({ children }) => {
 
   const editContact = async (id) => {
     let { data } = await axios(`http://localhost:8000/contacts/${id}`);
-
     dispatch({
       type: 'EDIT_CONTACT',
       payload: data,

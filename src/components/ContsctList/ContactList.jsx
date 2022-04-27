@@ -16,7 +16,7 @@ const ContactList = () => {
   return (
     <div className="d-flex flex-wrap justify-content-evenly">
       {contacts.map((item) => (
-        <Card style={{ width: '18rem' }} className="m-3">
+        <Card style={{ width: '18rem' }} className="m-3" key={item.id}>
           <Card.Body>
             <Card.Title>
               Name {item.name}{' '}
