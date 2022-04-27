@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { contactsContext } from '../../contexts/ContactsContext';
 import { FiBookmark } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
 const ContactList = () => {
-  const { contacts, getContacts, deleteContact, changeStatus } =
+  const { contacts, getContacts, deleteContact, changeStatus, editContact } =
     useContext(contactsContext);
 
   useEffect(() => {
@@ -33,7 +35,12 @@ const ContactList = () => {
             <Button variant="danger" onClick={() => deleteContact(item.id)}>
               Delete
             </Button>
-            <Button variant="warning">Edit</Button>
+
+            <Link to="/edit">
+              <Button variant="warning" onClick={() => editContact(item.id)}>
+                Edit
+              </Button>
+            </Link>
           </Card.Body>
         </Card>
       ))}
